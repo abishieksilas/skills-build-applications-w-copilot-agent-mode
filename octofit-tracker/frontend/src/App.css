@@ -1,0 +1,25 @@
+.app-shell { min-height: 100vh; background: #f6f3ee; color: #20231f; }
+.app-header { align-items: center; background: #193b36; color: #fff; display: flex; gap: 2rem; justify-content: space-between; padding: 1rem clamp(1rem, 4vw, 4rem); }
+.brand { align-items: center; color: #fff; display: flex; font-weight: 700; gap: .65rem; text-decoration: none; white-space: nowrap; }
+.brand img { height: 34px; width: 34px; }
+.main-nav { display: flex; flex-wrap: wrap; gap: .35rem; justify-content: flex-end; }
+.main-nav a { border-bottom: 2px solid transparent; color: #dbe7d5; padding: .4rem .65rem; text-decoration: none; }
+.main-nav a.active, .main-nav a:hover { border-bottom-color: #e8b44c; color: #fff; }
+.app-main { margin: 0 auto; max-width: 1180px; padding: clamp(2rem, 6vw, 5rem) clamp(1rem, 4vw, 3rem); }
+.dashboard-intro { max-width: 760px; padding: 4rem 0; }
+.dashboard-intro h1, .page-heading h1 { color: #193b36; font-size: clamp(2.5rem, 6vw, 5rem); font-weight: 800; letter-spacing: -.04em; line-height: .98; margin: .5rem 0 1.25rem; }
+.page-heading { margin-bottom: 2.5rem; max-width: 720px; }
+.eyebrow { color: #b15d38; font-size: .75rem; font-weight: 800; letter-spacing: .14em; margin: 0; }
+.lead-copy { color: #5d665e; font-size: 1.15rem; max-width: 620px; }
+.dashboard-links { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 2rem; }
+.data-card { background: #fff; border: 1px solid #e4ded4; border-radius: 6px; padding: 1.4rem; }
+.data-card h2 { color: #193b36; font-size: 1.3rem; margin: .9rem 0 .35rem; }
+.avatar { align-items: center; border-radius: 50%; color: #fff; display: inline-flex; font-weight: 800; height: 3rem; justify-content: center; width: 3rem; }
+.muted { color: #778078; display: block; }
+.activity-table { background: #fff; border: 1px solid #e4ded4; }
+.activity-table th { background: #193b36; color: #fff; }
+.leaderboard-list { display: grid; gap: .65rem; max-width: 760px; }
+.leaderboard-row { align-items: center; background: #fff; border-left: 5px solid #e8b44c; display: grid; gap: 1rem; grid-template-columns: 3rem 1fr auto; padding: 1.1rem 1.25rem; }
+.leaderboard-row .muted { font-size: .85rem; }
+.rank { color: #b15d38; font-weight: 800; }
+@media (max-width: 760px) { .app-header { align-items: flex-start; flex-direction: column; gap: .8rem; } .main-nav { justify-content: flex-start; } .main-nav a { padding-left: 0; padding-right: .9rem; } .dashboard-intro { padding: 2rem 0; } }
