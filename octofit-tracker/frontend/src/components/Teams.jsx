@@ -4,7 +4,7 @@ import { fetchCollection } from '../api.js'
 function Teams() {
   const [teams, setTeams] = useState([])
   const [error, setError] = useState('')
-  useEffect(() => { fetchCollection('teams').then(setTeams).catch((requestError) => setError(requestError.message)) }, [])
+  useEffect(() => { fetchCollection('/api/teams/').then(setTeams).catch((requestError) => setError(requestError.message)) }, [])
   return <CollectionPage title="Teams" description="Groups that keep momentum social." error={error}><div className="row g-3">{teams.map((team) => <article className="col-md-6" key={team._id}><div className="data-card h-100"><p className="eyebrow">TEAM</p><h2>{team.name}</h2><p>{team.motto}</p><strong>{team.members?.length || 0} members</strong></div></article>)}</div></CollectionPage>
 }
 

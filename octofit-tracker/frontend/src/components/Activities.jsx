@@ -4,7 +4,7 @@ import { fetchCollection } from '../api.js'
 function Activities() {
   const [activities, setActivities] = useState([])
   const [error, setError] = useState('')
-  useEffect(() => { fetchCollection('activities').then(setActivities).catch((requestError) => setError(requestError.message)) }, [])
+  useEffect(() => { fetchCollection('/api/activities/').then(setActivities).catch((requestError) => setError(requestError.message)) }, [])
   return <CollectionPage title="Activities" description="A clear read on recent effort." error={error}><div className="table-responsive"><table className="table align-middle activity-table"><thead><tr><th>Type</th><th>Duration</th><th>Calories</th><th>Completed</th></tr></thead><tbody>{activities.map((activity) => <tr key={activity._id}><td><strong>{activity.type}</strong></td><td>{activity.durationMinutes} min</td><td>{activity.calories} kcal</td><td>{new Date(activity.completedAt).toLocaleDateString()}</td></tr>)}</tbody></table></div></CollectionPage>
 }
 
